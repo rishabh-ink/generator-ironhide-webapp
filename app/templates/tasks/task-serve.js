@@ -3,7 +3,7 @@ var CFG  = require("./utils/config.js");
 var $    = require("gulp-load-plugins")();
 var path = require("path");
 var pkg  = require(path.join("..", CFG.FILE.config.pkg));
-var browserSync = require("browser-sync");
+var bs   = require("browser-sync");
 
 /**
  * serve
@@ -11,7 +11,7 @@ var browserSync = require("browser-sync");
  * @see github.com/google/web-starter-kit/blob/master/gulpfile.js
  */
 gulp.task("serve", ["build"], function () {
-  browserSync({
+  bs({
     notify: true,
     injectChanges: true,
     startPath: path.join(CFG.DIR.src), // Hack path.join() to build a URL string.
@@ -28,7 +28,7 @@ gulp.task("serve", ["build"], function () {
 
   gulp.watch([
     path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.markup.html)
-  ], browserSync.reload);
+  ], bs.reload);
 
   gulp.watch([
     path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.script.js)
@@ -52,5 +52,5 @@ gulp.task("serve", ["build"], function () {
 
   gulp.watch([
     path.join(CFG.DIR.dist, "/**/*.*")
-  ], browserSync.reload);
+  ], bs.reload);
 });
