@@ -34,12 +34,16 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     app: function () {
       this.fs.copy(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json')
+        this.templatePath('app/**/*'),
+        this.destinationPath('app')
       );
       this.fs.copy(
-        this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
+        this.templatePath('tasks/**/*'),
+        this.destinationPath('tasks')
+      );
+      this.fs.copy(
+        this.templatePath('tests/**/*'),
+        this.destinationPath('tests')
       );
     },
 
@@ -53,6 +57,10 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('Gemfile.lock')
       );
       this.fs.copy(
+        this.templatePath('_bower.json'),
+        this.destinationPath('bower.json')
+      );
+      this.fs.copy(
         this.templatePath('_gulpfile.js'),
         this.destinationPath('gulpfile.js')
       );
@@ -63,6 +71,10 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('_readme.md'),
         this.destinationPath('readme.md')
+      );
+      this.fs.copy(
+        this.templatePath('_package.json'),
+        this.destinationPath('package.json')
       );
       this.fs.copy(
         this.templatePath('_travis.yml'),
