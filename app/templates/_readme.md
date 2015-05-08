@@ -1,4 +1,4 @@
-# MyApp [:star:](http://example.com)
+# <%= props.appname %> [:star:](http://example.com)
 
 > MyApp.
 

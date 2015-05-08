@@ -2,6 +2,7 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var path = require('path');
 
 module.exports = yeoman.generators.Base.extend({
   initializing: function () {
@@ -13,14 +14,14 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the great ' + chalk.red('IronhideWebapp') + ' generator!'
+      'Welcome to the ' + chalk.red('ironhide-webapp') + ' generator!'
     ));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'input',
+      name: 'appname',
+      message: 'App name',
+      default: path.basename(process.cwd())
     }];
 
     this.prompt(prompts, function (props) {
@@ -33,9 +34,10 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('app/**/*'),
-        this.destinationPath('app')
+        this.destinationPath('app'),
+        { props: this.props }
       );
       this.fs.copy(
         this.templatePath('tasks/**/*'),
@@ -48,77 +50,95 @@ module.exports = yeoman.generators.Base.extend({
     },
 
     projectfiles: function () {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_Gemfile'),
-        this.destinationPath('Gemfile')
+        this.destinationPath('Gemfile'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_Gemfile.lock'),
-        this.destinationPath('Gemfile.lock')
+        this.destinationPath('Gemfile.lock'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
+        this.destinationPath('bower.json'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_gulpfile.js'),
-        this.destinationPath('gulpfile.js')
+        this.destinationPath('gulpfile.js'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_license.md'),
-        this.destinationPath('license.md')
+        this.destinationPath('license.md'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_readme.md'),
-        this.destinationPath('readme.md')
+        this.destinationPath('readme.md'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_package.json'),
-        this.destinationPath('package.json')
+        this.destinationPath('package.json'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_travis.yml'),
-        this.destinationPath('travis.yml')
+        this.destinationPath('travis.yml'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('bowerrc'),
-        this.destinationPath('.bowerrc')
+        this.destinationPath('.bowerrc'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('compassrc'),
-        this.destinationPath('.compassrc')
+        this.destinationPath('.compassrc'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
+        this.destinationPath('.editorconfig'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('gitattributes'),
-        this.destinationPath('.gitattributes')
+        this.destinationPath('.gitattributes'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('jshintignore'),
-        this.destinationPath('.jshintignore')
+        this.destinationPath('.jshintignore'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
+        this.destinationPath('.jshintrc'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('karmarc'),
-        this.destinationPath('.karmarc')
+        this.destinationPath('.karmarc'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('ruby-gemset'),
-        this.destinationPath('.ruby-gemset')
+        this.destinationPath('.ruby-gemset'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('ruby-version'),
-        this.destinationPath('.ruby-version')
+        this.destinationPath('.ruby-version'),
+        { props: this.props }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('scsslintrc'),
-        this.destinationPath('.scsslintrc')
+        this.destinationPath('.scsslintrc'),
+        { props: this.props }
       );
     }
   },
