@@ -1,6 +1,6 @@
 # generator-ironhide-webapp [![Build Status](https://secure.travis-ci.org/rishabhsrao/generator-ironhide-webapp.png?branch=master)](https://travis-ci.org/rishabhsrao/generator-ironhide-webapp)
 
-> [Yeoman](http://yeoman.io) generator
+> A [Yeoman](http://yeoman.io) generator for developing a webapp with Bower, Gulp, jQuery, Karma with Jasmine, RequireJS, Ruby Sass with Compass and scss-lint and Travis.
 
 
 ## Getting Started
