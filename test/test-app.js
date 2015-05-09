@@ -9,16 +9,34 @@ describe('ironhide-webapp:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../app'))
       .withOptions({ skipInstall: true })
-      .withPrompts({ someOption: true })
+      .withPrompts({ appname: 'ironhide-webapp-test-app' })
       .on('end', done);
   });
 
-  it('creates files', function () {
+  it('Should create files', function () {
     assert.file([
+      'app',
+      'tasks',
+      'tests',
       'bower.json',
+      'Gemfile',
+      'Gemfile.lock',
+      'gulpfile.js',
+      'license.md',
       'package.json',
+      'package.json',
+      'readme.md',
+      'travis.yml',
+      '.bowerrc',
+      '.compassrc',
       '.editorconfig',
-      '.jshintrc'
+      '.gitattributes',
+      '.jshintignore',
+      '.jshintrc',
+      '.karmarc',
+      '.ruby-gemset',
+      '.ruby-version',
+      '.scsslintrc'
     ]);
   });
 });
