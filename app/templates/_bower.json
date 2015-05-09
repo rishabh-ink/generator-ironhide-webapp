@@ -1,17 +1,17 @@
 {
   "name": "<%= _.kebabCase(props.appname) %>",
-  "description": "MyApp.",
-  "url": "",
+  "description": "<%= props.description %>",
+  "url": "https://github.com/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>",
   "license": "./license.md",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>.git"
   },
   "private": true,
   "author": {
-    "name": "You",
-    "email": "you@email.com",
-    "url": "http://you.com"
+    "name": "",
+    "email": "",
+    "url": ""
   },
   "dependencies": {
     "jquery": "https://github.com/jquery/jquery.git#1.10.2"

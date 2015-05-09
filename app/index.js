@@ -12,7 +12,6 @@ module.exports = yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async();
 
-    // Have Yeoman greet the user.
     this.log(yosay(
       'Welcome to the ' + chalk.red('ironhide-webapp') + ' generator!'
     ));
@@ -22,11 +21,20 @@ module.exports = yeoman.generators.Base.extend({
       name: 'appname',
       message: 'App name',
       default: path.basename(process.cwd())
+    }, {
+      type: 'input',
+      name: 'description',
+      message: 'App description',
+      default: ''
+    }, {
+      type: 'input',
+      name: 'githubUsername',
+      message: 'Github username',
+      default: process.env.USER
     }];
 
     this.prompt(prompts, function (props) {
       this.props = props;
-      // To access props later use this.props.someOption;
 
       done();
     }.bind(this));

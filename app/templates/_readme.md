@@ -1,8 +1,14 @@
-# <%= props.appname %> [:star:](http://example.com)
+# <%= props.appname %> [:star:](https://github.com/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>)
 
-> MyApp.
+> <%= props.description %>
 
----
+[![Travis](https://img.shields.io/travis/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>.svg?style=flat-square "Build status")](https://travis-ci.org/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>)
+[![David](https://img.shields.io/david/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>.svg?style=flat-square "Dependency status (Node modules)")](https://david-dm.org/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>)
+[![Gemnasium](https://img.shields.io/gemnasium/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>.svg?style=flat-square "Dependency status (Ruby gems)")](https://gemnasium.com/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>)
+[![Code Climate](https://img.shields.io/codeclimate/github/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>.svg?style=flat-square "Code Climate status")](https://codeclimate.com/github/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>)
+[![Coveralls](https://img.shields.io/coveralls/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>.svg?style=flat-square "Test coverage status")](https://coveralls.io/r/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](license.md)
+
 
 ## :rowboat: Get started
 
@@ -15,8 +21,8 @@ This project depends on the following tools:
 :tophat: **Tip** Use [nvm](https://github.com/creationix/nvm) and [rvm](http://rvm.io) for easy management of NodeJS and Ruby installations.
 
 ```
-git clone <MyApp Git URL> MyApp
-cd MyApp
+git clone git@github.com:<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>.git <%= _.kebabCase(props.appname) %>
+cd <%= _.kebabCase(props.appname) %>
 npm install
 bundle install
 ./node_modules/.bin/bower install
