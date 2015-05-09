@@ -25,7 +25,6 @@ describe('ironhide-webapp:app', function () {
       'package.json',
       'package.json',
       'readme.md',
-      'travis.yml',
       '.bowerrc',
       '.compassrc',
       '.editorconfig',
@@ -36,7 +35,8 @@ describe('ironhide-webapp:app', function () {
       '.karmarc',
       '.ruby-gemset',
       '.ruby-version',
-      '.scsslintrc'
+      '.scsslintrc',
+      '.travis.yml'
     ]);
   });
 });

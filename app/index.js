@@ -133,8 +133,8 @@ module.exports = yeoman.generators.Base.extend({
       );
 
       this.fs.copyTpl(
-        this.templatePath('_travis.yml'),
-        this.destinationPath('travis.yml'),
+        this.templatePath('travis.yml'),
+        this.destinationPath('.travis.yml'),
         { props: this.props }
       );
 
