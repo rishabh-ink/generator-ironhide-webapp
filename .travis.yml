@@ -4,3 +4,10 @@ node_js:
   - '0.12'
 notifications:
   email: false
+deploy:
+  provider: npm
+  email: rishabhsrao@gmail.com
+  on:
+    tags: true
+  api_key:
+    secure: Ow++gxPK+EoGsJnAEGbWbduQFHXUq8QVR7i2CSh5Kow1VDo8tAdBe/GVjNSd8s7mCFTzUJKC7Lnm1vsbpEf+6FIA200r6uNf4puEL3uZcgbhN9jFqkVYZZkle8aw7zpG+4a7pHfI1WLlKwr7HoA1FJjcltmWBqijl9IXxMQtOKJwVuWefibnIV+AQzJMSLKuEqZIUQ7UecTtHlbNXoURXCXd8duc5FTramGQkurlv+AjM4tE6N7H2LVxZddUvvFfIslZZ7THvte3bTtWvmEftG2YpWt54kmVU/GTnYUFfWeF2GtHBW/4DmCPl40l4ZQDr2RqRSpRRv0HaKmRoCJwoYCugBMOFo0/EvOXzKmhuLchMVIf2aLVUO0AZ1FxgSRQj2gnFV/xzgB1Ie2/jZyca7oOnCVNls7UoVX9o3MUCpnNTNMjwVG9VzMpBvgTWjrRZSK7FobG2la+sG3UzqUVo1NwTEvKVkim4/BcCIp0k0QBjM+quytNL81xNBIZ9y5wmvPhpeQ9SVIVWsX4hh6FyDu8/gDa3501/JtHp/JeJ1RX57sohaBbGtu65xmrREpt38aujIH1sLULC7nL1HFo8xrwnOqq9dzmwGAUcertwZdfTILkeUVekzWAHXNa/8ymdEIAp5ySmjpZaKwBI5OM74BSiUNJ0FgxKxy1Pi/8L+0=
