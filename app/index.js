@@ -83,12 +83,6 @@ module.exports = yeoman.generators.Base.extend({
       );
 
       this.fs.copyTpl(
-        this.templatePath('_Gemfile.lock'),
-        this.destinationPath('Gemfile.lock'),
-        { props: this.props }
-      );
-
-      this.fs.copyTpl(
         this.templatePath('compassrc'),
         this.destinationPath('.compassrc'),
         { props: this.props }

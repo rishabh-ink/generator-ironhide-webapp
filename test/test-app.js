@@ -20,7 +20,6 @@ describe('ironhide-webapp:app', function () {
       'tests',
       'bower.json',
       'Gemfile',
-      'Gemfile.lock',
       'gulpfile.js',
       'license.md',
       'package.json',
