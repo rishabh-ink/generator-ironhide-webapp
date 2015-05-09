@@ -23,6 +23,6 @@ yo ironhide-webapp
 
 ## :scroll: License
 
-[MIT license](license.md) &copy; [Rishabh Rao](http://rishabhsrao.github.io).
+[MIT license](LICENSE.md) &copy; [Rishabh Rao](http://rishabhsrao.github.io).
 
 ---
