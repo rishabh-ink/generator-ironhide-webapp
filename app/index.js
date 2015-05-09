@@ -39,105 +39,130 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('app'),
         { props: this.props }
       );
+    },
+
+    taskRunner: function () {
+      this.fs.copyTpl(
+        this.templatePath('_gulpfile.js'),
+        this.destinationPath('gulpfile.js'),
+        { props: this.props }
+      );
+
       this.fs.copy(
         this.templatePath('tasks/**/*'),
         this.destinationPath('tasks')
       );
+    },
+
+    testRunner: function () {
+      this.fs.copyTpl(
+        this.templatePath('karmarc'),
+        this.destinationPath('.karmarc'),
+        { props: this.props }
+      );
+
       this.fs.copy(
         this.templatePath('tests/**/*'),
         this.destinationPath('tests')
       );
     },
 
-    projectfiles: function () {
+    cssPreprocessor: function () {
       this.fs.copyTpl(
         this.templatePath('_Gemfile'),
         this.destinationPath('Gemfile'),
         { props: this.props }
       );
+
       this.fs.copyTpl(
         this.templatePath('_Gemfile.lock'),
         this.destinationPath('Gemfile.lock'),
         { props: this.props }
       );
-      this.fs.copyTpl(
-        this.templatePath('_bower.json'),
-        this.destinationPath('bower.json'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('_gulpfile.js'),
-        this.destinationPath('gulpfile.js'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('_license.md'),
-        this.destinationPath('license.md'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('_readme.md'),
-        this.destinationPath('readme.md'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('_travis.yml'),
-        this.destinationPath('travis.yml'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('bowerrc'),
-        this.destinationPath('.bowerrc'),
-        { props: this.props }
-      );
+
       this.fs.copyTpl(
         this.templatePath('compassrc'),
         this.destinationPath('.compassrc'),
         { props: this.props }
       );
-      this.fs.copyTpl(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('gitattributes'),
-        this.destinationPath('.gitattributes'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('jshintignore'),
-        this.destinationPath('.jshintignore'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc'),
-        { props: this.props }
-      );
-      this.fs.copyTpl(
-        this.templatePath('karmarc'),
-        this.destinationPath('.karmarc'),
-        { props: this.props }
-      );
+
       this.fs.copyTpl(
         this.templatePath('ruby-gemset'),
         this.destinationPath('.ruby-gemset'),
         { props: this.props }
       );
+
       this.fs.copyTpl(
         this.templatePath('ruby-version'),
         this.destinationPath('.ruby-version'),
         { props: this.props }
       );
+
       this.fs.copyTpl(
         this.templatePath('scsslintrc'),
         this.destinationPath('.scsslintrc'),
+        { props: this.props }
+      );
+    },
+
+    others: function () {
+      this.fs.copyTpl(
+        this.templatePath('_bower.json'),
+        this.destinationPath('bower.json'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('_license.md'),
+        this.destinationPath('license.md'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('_readme.md'),
+        this.destinationPath('readme.md'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('_package.json'),
+        this.destinationPath('package.json'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('_travis.yml'),
+        this.destinationPath('travis.yml'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('bowerrc'),
+        this.destinationPath('.bowerrc'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('editorconfig'),
+        this.destinationPath('.editorconfig'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('gitattributes'),
+        this.destinationPath('.gitattributes'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('jshintignore'),
+        this.destinationPath('.jshintignore'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('jshintrc'),
+        this.destinationPath('.jshintrc'),
         { props: this.props }
       );
     }
