@@ -1,7 +1,6 @@
 # App
 dist
 report
-app/data/secrets.js
 
 # Sass (sass-lang.com)
 *.sass-cache
