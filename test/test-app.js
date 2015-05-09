@@ -31,6 +31,7 @@ describe('ironhide-webapp:app', function () {
       '.compassrc',
       '.editorconfig',
       '.gitattributes',
+      '.gitignore',
       '.jshintignore',
       '.jshintrc',
       '.karmarc',

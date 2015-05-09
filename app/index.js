@@ -155,6 +155,12 @@ module.exports = yeoman.generators.Base.extend({
       );
 
       this.fs.copyTpl(
+        this.templatePath('gitignore'),
+        this.destinationPath('.gitignore'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
         this.templatePath('jshintignore'),
         this.destinationPath('.jshintignore'),
         { props: this.props }
