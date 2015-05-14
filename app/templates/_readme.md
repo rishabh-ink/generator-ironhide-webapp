@@ -82,12 +82,12 @@ bundle clean --force && bundle install
 This project is continuously deployed to [Heroku](http://<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/dist) using a [NodeJS](https://github.com/heroku/heroku-buildpack-nodejs) [buildpack](https://devcenter.heroku.com/articles/buildpacks) by [Travis](https://travis-ci.org/rishabhsrao/remember), whenever a new tag is pushed. This should be configured **only once** using the [Heroku toolbelt](https://toolbelt.heroku.com):
 
 ```
-heroku create <%= _.kebabCase(props.herokuAppname) %>
-heroku ps:scale web=1
-heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-nodejs#v75 --app <%= _.kebabCase(props.herokuAppname) %>
+bundle exec heroku create <%= _.kebabCase(props.herokuAppname) %>
+bundle exec heroku ps:scale web=1
+bundle exec heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-nodejs#v75 --app <%= _.kebabCase(props.herokuAppname) %>
 ```
 
-:tophat: **Tip** The `heroku ps:scale web=1` will spin up a [dyno](https://devcenter.heroku.com/articles/dynos) under the [free](https://blog.heroku.com/archives/2015/5/7/heroku-free-dynos) plan.
+:tophat: **Tip** The `ps:scale web=1` command will spin up a [dyno](https://devcenter.heroku.com/articles/dynos) under the [free](https://blog.heroku.com/archives/2015/5/7/heroku-free-dynos) plan.
 :tophat: **Tip** The `#75` above is the [release tag](https://github.com/heroku/heroku-buildpack-nodejs/releases) for the project. Use the latest tag for best results.
 :tophat: **Tip** The non-minified version of this project is also deployed to [Heroku at /app](http://<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/app).
 

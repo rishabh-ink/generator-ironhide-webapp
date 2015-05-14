@@ -14,3 +14,6 @@ gem 'scss-lint', '0.38.0'
 
 # Travis (rubygems.org/gems/travis)
 gem 'travis', '1.7.6'
+
+# Heroku (rubygems.org/gems/heroku)
+gem 'heroku', '3.36.7'
