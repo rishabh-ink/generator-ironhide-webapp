@@ -1,4 +1,4 @@
-# <%= props.appname %> [:star:](https://github.com/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>)
+# <%= props.appname %> [:star:](http://<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/dist)
 
 > <%= props.description %>
 
@@ -8,6 +8,11 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>.svg?style=flat-square "Code Climate status")](https://codeclimate.com/github/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>)
 [![Coveralls](https://img.shields.io/coveralls/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>.svg?style=flat-square "Test coverage status")](https://coveralls.io/r/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](license.md)
+
+
+## :star: Live demo
+
+The live demo is hosted on Heroku at [<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/dist](http://<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/dist).
 
 
 ## :rowboat: Get started
@@ -70,6 +75,21 @@ bundle clean --force && bundle install
 ```
 
 ... to keep your repository lean and mean.
+
+
+## :rocket: Deploy
+
+This project is continuously deployed to [Heroku](http://<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/dist) using a [NodeJS](https://github.com/heroku/heroku-buildpack-nodejs) [buildpack](https://devcenter.heroku.com/articles/buildpacks) by [Travis](https://travis-ci.org/rishabhsrao/remember), whenever a new tag is pushed. This should be configured **only once** using the [Heroku toolbelt](https://toolbelt.heroku.com):
+
+```
+heroku create <%= _.kebabCase(props.herokuAppname) %>
+heroku ps:scale web=1
+heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-nodejs#v75 --app <%= _.kebabCase(props.herokuAppname) %>
+```
+
+:tophat: **Tip** The `heroku ps:scale web=1` will spin up a [dyno](https://devcenter.heroku.com/articles/dynos) under the [free](https://blog.heroku.com/archives/2015/5/7/heroku-free-dynos) plan.
+:tophat: **Tip** The `#75` above is the [release tag](https://github.com/heroku/heroku-buildpack-nodejs/releases) for the project. Use the latest tag for best results.
+:tophat: **Tip** The non-minified version of this project is also deployed to [Heroku at /app](http://<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/app).
 
 
 ## :scroll: License

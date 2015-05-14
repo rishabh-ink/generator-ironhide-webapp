@@ -31,6 +31,11 @@ module.exports = yeoman.generators.Base.extend({
       name: 'githubUsername',
       message: 'Github username',
       default: process.env.USER
+    }, {
+      type: 'input',
+      name: 'herokuAppname',
+      message: 'Heroku app name',
+      default: path.basename(process.cwd())
     }];
 
     this.prompt(prompts, function (props) {
