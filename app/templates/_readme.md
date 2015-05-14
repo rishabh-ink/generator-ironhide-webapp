@@ -83,12 +83,22 @@ This project is continuously deployed to [Heroku](http://www.heroku.com) at [<%=
 
 ```
 heroku create <%= _.kebabCase(props.herokuAppname) %>
-heroku ps:scale web=1
+heroku ps:scale web=1 --app <%= _.kebabCase(props.herokuAppname) %>
 heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-nodejs#v75 --app <%= _.kebabCase(props.herokuAppname) %>
 ```
 
+:tophat: **Tip** You will need to authenticate Travis with Heroku by adding an API key using:
+
+```
+bundle exec travis encrypt $(heroku auth:token) --add deploy.api_key
+```
+
+... which will update `.travis.yml` with an encrypted Heroku API key.
+
 :tophat: **Tip** The `heroku ps:scale web=1` will spin up a [dyno](https://devcenter.heroku.com/articles/dynos) under the [free](https://blog.heroku.com/archives/2015/5/7/heroku-free-dynos) plan.
+
 :tophat: **Tip** The `#75` above is the [release tag](https://github.com/heroku/heroku-buildpack-nodejs/releases) for the project. Use the latest tag for best results.
+
 :tophat: **Tip** The non-minified version of this project is also deployed to [Heroku at /app](http://<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/app).
 
 
