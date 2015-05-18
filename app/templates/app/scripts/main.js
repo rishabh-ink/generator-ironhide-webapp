@@ -2,15 +2,13 @@
   "use strict";
 
   require.config({
-    baseUrl: "..",
-
     paths: {
       // Libraries
-      "jquery": "libraries/jquery/jquery",
+      "jquery": "../../libraries/jquery/jquery",
       // /Libraries
 
       // Application
-      "app": "app/scripts/app",
+      "app": "app",
       // /Application
     },
 
