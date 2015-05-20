@@ -9,7 +9,6 @@
 
       // Application
       "app": "app",
-      "example": "components/example"
       // /Application
     },
 
