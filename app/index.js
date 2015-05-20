@@ -63,7 +63,8 @@ module.exports = yeoman.generators.Base.extend({
 
       this.fs.copy(
         this.templatePath('tasks/**/*'),
-        this.destinationPath('tasks')
+        this.destinationPath('tasks'),
+        { props: this.props }
       );
     },
 
@@ -76,7 +77,8 @@ module.exports = yeoman.generators.Base.extend({
 
       this.fs.copy(
         this.templatePath('tests/**/*'),
-        this.destinationPath('tests')
+        this.destinationPath('tests'),
+        { props: this.props }
       );
     },
 
