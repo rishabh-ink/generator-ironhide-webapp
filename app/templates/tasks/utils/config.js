@@ -35,6 +35,9 @@ module.exports = {
       compass: ".compassrc",
       bower: "bower.json",
       testMain: "main.js",
+      scriptMain: "main.js",
+      appMain: "<%= _.kebabCase(props.appname) %>.js",
+      appModule: "<%= _.kebabCase(props.appname) %>",
       karma: ".karmarc"
     },
     coverageReporter: {
