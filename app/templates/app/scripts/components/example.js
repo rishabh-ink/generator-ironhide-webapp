@@ -4,41 +4,26 @@ function($) {
 
   var Example = {
     defaults: {
-      /**
-       * Component name slug.
-       */
       name: "example",
 
-      /**
-       * jQuery selectors.
-       */
       elements: {
         exampleSub: "[data-js~='exampleSubElement']"
       },
 
-      /**
-       * Add or remove classes.
-       */
       classnames: {
         exampleSubActive: "example-sub--active"
       },
 
-      // add more options...
+      // Add more options as necessary.
     },
 
-    /**
-     * Fetched jQuery elements.
-     */
     elements: {},
 
     /**
-     * Child components.
+     * Child/nested components.
      */
     components: {},
 
-    /**
-     * Component constants.
-     */
     constants: {},
 
     create: function(options) {
