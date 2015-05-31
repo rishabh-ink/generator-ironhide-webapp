@@ -1,5 +1,5 @@
-define(["jquery"],
-function($) {
+define(["jquery" /*, another-component */],
+function($ /*,       AnotherComponent */) {
   "use strict";
 
   var Example = {
@@ -7,11 +7,11 @@ function($) {
       name: "example",
 
       elements: {
-        exampleSub: "[data-js~='exampleSubElement']"
+        example: "[data-js~='exampleElement']"
       },
 
       classnames: {
-        exampleSubActive: "example-sub--active"
+        exampleActive: "example--active"
       },
 
       // Add more options as necessary.
@@ -20,7 +20,7 @@ function($) {
     elements: {},
 
     /**
-     * Child/nested components.
+     * Nested/child components.
      */
     components: {},
 
@@ -35,7 +35,6 @@ function($) {
     },
 
     init: function(options) {
-
       this.fetch();
       this.attach();
       this.setup();
@@ -44,7 +43,7 @@ function($) {
     },
 
     fetch: function() {
-      // this.elements.exampleSub = $(this.options.elements.exampleSub);
+      // this.elements.example = $(this.options.elements.example);
 
       console.log(this.options.name, "fetch()", "Fetched", { elements: this.elements });
 
@@ -54,23 +53,23 @@ function($) {
     attach: function() {
       var events = {};
 
-      // events["click." + this.options.name] = $.proxy(this.eventExampleSubClicked, this);
+      // events["click." + this.options.name] = $.proxy(this.onClickExample, this);
 
-      // this.elements.exampleSub.on(events);
+      // this.elements.example.on(events);
 
       console.log(this.options.name, "attach()", "Attached events", { events: events });
       return this;
     },
 
     setup: function() {
-      // this.components.childComponent = ChildComponent.create({ /* ... options ... */ });
+      // this.components.anotherComponent = AnotherComponent.create({ /* ... options ... */ });
 
       console.log(this.options.name, "setup()", "Set up components", { components: this.components });
       return this;
     },
 
     destroy: function() {
-      // this.elements.exampleSub.off(".example");
+      // this.elements.example.off("." + this.options.name);
 
       return this;
     }

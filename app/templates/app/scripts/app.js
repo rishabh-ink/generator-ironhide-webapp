@@ -20,7 +20,7 @@ function($,        Example) {
     elements: {},
 
     /**
-     * Child/nested components.
+     * Nested/child components.
      */
     components: {},
 
@@ -44,7 +44,7 @@ function($,        Example) {
     },
 
     fetch: function() {
-      // this.elements.exampleSub = $(this.options.elements.exampleSub);
+      // this.elements.example = $(this.options.elements.example);
 
       console.log(this.options.name, "fetch()", "Fetched", { elements: this.elements });
 
@@ -54,18 +54,24 @@ function($,        Example) {
     attach: function() {
       var events = {};
 
+      // events["click." + this.options.name] = $.proxy(this.onClickExample, this);
+
+      // this.elements.example.on(events);
+
       console.log(this.options.name, "attach()", "Attached events", { events: events });
       return this;
     },
 
     setup: function() {
-      this.components.example = Example.create();
+      // this.components.example = Example.create({ /* ... options ... */ });
 
       console.log(this.options.name, "setup()", "Set up components", { components: this.components });
       return this;
     },
 
     destroy: function() {
+      // this.elements.example.off("." + this.options.name);
+
       return this;
     },
 
