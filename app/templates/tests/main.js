@@ -20,12 +20,12 @@ require.config({
     // /Libraries
 
     // Application
-    "app": "app/scripts/app",
+    "<%= _.kebabCase(props.appname) %>": "app/scripts/<%= _.kebabCase(props.appname) %>",
     "components/example": "app/scripts/components/example",
     // /Application
 
     // Fixtures
-    "app-fixture": "tests/fixtures/app-fixture"
+    "<%= _.kebabCase(props.appname) %>-fixture": "tests/fixtures/<%= _.kebabCase(props.appname) %>-fixture"
     // /Fixtures
   },
 
