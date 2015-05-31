@@ -53,6 +53,16 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('app'),
         { props: this.props }
       );
+
+      this.fs.delete(
+        this.destinationPath('app/scripts/app.js')
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('app/scripts/app.js'),
+        this.destinationPath('app/scripts/' + _.kebabCase(this.props.appname) + '.js'),
+        { props: this.props }
+      );
     },
 
     taskRunner: function () {
@@ -62,9 +72,21 @@ module.exports = yeoman.generators.Base.extend({
         { props: this.props }
       );
 
-      this.fs.copy(
-        this.templatePath('tasks/**/*'),
+      this.fs.copyTpl(
+        this.templatePath('tasks/*'),
         this.destinationPath('tasks'),
+        { props: this.props }
+      );
+
+      // Non-template files viz. images.
+      this.fs.copy(
+        this.templatePath('tasks/assets/**/*'),
+        this.destinationPath('tasks/assets')
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('tasks/utils/**/*'),
+        this.destinationPath('tasks/utils'),
         { props: this.props }
       );
     },
@@ -76,9 +98,29 @@ module.exports = yeoman.generators.Base.extend({
         { props: this.props }
       );
 
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('tests/**/*'),
         this.destinationPath('tests'),
+        { props: this.props }
+      );
+
+      this.fs.delete(
+        this.destinationPath('tests/unit/app-spec.js')
+      );
+
+      this.fs.delete(
+        this.destinationPath('tests/unit/app-fixture.js')
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('tests/unit/app-spec.js'),
+        this.destinationPath('tests/unit/' + _.kebabCase(this.props.appname) + '-spec.js'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('tests/fixtures/app-fixture.js'),
+        this.destinationPath('tests/fixtures/' + _.kebabCase(this.props.appname) + '-fixture.js'),
         { props: this.props }
       );
     },
