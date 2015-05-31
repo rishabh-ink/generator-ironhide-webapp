@@ -227,6 +227,12 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
-    this.installDependencies();
+    var self = this;
+
+    self.installDependencies({
+      callback: function() {
+        self.log('Installation complete! Please run ' + chalk.yellow('rvm use . && bundle install') + ' to use your new Ruby gemset and to install your Ruby gems.');
+      }
+    });
   }
 });
