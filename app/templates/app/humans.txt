@@ -1,7 +1,7 @@
 # humanstxt.org
 
               ___
-             / '_)   Hand-crafted with <3.
+             / '_)   Handcrafted with ♥.
       .-^^^-/ /
    __/       /
   <__.|_|-|_|
@@ -9,3 +9,7 @@
 Generated using:
 generator-ironhide-webapp
 www.npmjs.com/package/generator-ironhide-webapp
+
+Tools:
+NodeJS, Ruby, Gulp, Bower, Sass with Compass,
+RequireJS, Karma, Jasmine, JS Hint, SCSS Lint
