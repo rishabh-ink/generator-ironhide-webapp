@@ -1,5 +1,6 @@
 {
   "name": "<%= _.kebabCase(props.appname) %>",
+  "version": "0.0.0",
   "description": "<%= props.description %>",
   "url": "https://github.com/<%= _.kebabCase(props.githubUsername) %>/<%= _.kebabCase(props.appname) %>",
   "license": "./license.md",
@@ -14,7 +15,7 @@
     "url": ""
   },
   "engines": {
-    "node": "0.12.2",
+    "node": "0.12.4",
     "npm": "2.7.4"
   },
   "dependencies": {
