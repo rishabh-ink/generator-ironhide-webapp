@@ -90,7 +90,7 @@ heroku ps:scale web=1 --app <%= _.kebabCase(props.herokuAppname) %>
 heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-nodejs#v75 --app <%= _.kebabCase(props.herokuAppname) %>
 ```
 
-:tophat: **Tip** You will need to authenticate Travis with Heroku by adding an API key using:
+You will need to authenticate Travis with Heroku by adding an API key using:
 
 ```
 bundle exec travis encrypt $(heroku auth:token) --add deploy.api_key
@@ -100,7 +100,18 @@ bundle exec travis encrypt $(heroku auth:token) --add deploy.api_key
 
 :tophat: **Tip** The `heroku ps:scale web=1` will spin up a [dyno](https://devcenter.heroku.com/articles/dynos) under the [free](https://blog.heroku.com/archives/2015/5/7/heroku-free-dynos) plan.
 
+:tophat: **Tip** Use `heroku logs --app <%= _.kebabCase(props.herokuAppname) %>` to view your web server logs.
+
 :tophat: **Tip** The `#75` above is the [release tag](https://github.com/heroku/heroku-buildpack-nodejs/releases) for the project. Use the latest tag for best results.
+
+Next, you need to push a tagged release for the first time so that Travis can deploy once. Bump the `version` property in [`bower.json`](bower.json) and [`package.json`](package.json) and create a tag and push it using:
+
+```
+git tag -a v0.0.1 -m "Release v0.0.1"
+git push origin master --tags
+```
+
+This will make Travis deploy your tagged release to Heroku.
 
 :tophat: **Tip** The non-minified version of this project is also deployed to Heroku at [<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/app](http://<%= _.kebabCase(props.herokuAppname) %>.herokuapp.com/app).
 
