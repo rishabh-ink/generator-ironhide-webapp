@@ -1,6 +1,6 @@
 {
   "name": "generator-ironhide-webapp",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A Yeoman generator for developing a webapp with Bower, Gulp, jQuery, Karma with Jasmine, RequireJS, Ruby Sass with Compass and scss-lint and Travis.",
   "license": "MIT",
   "main": "app/index.js",
