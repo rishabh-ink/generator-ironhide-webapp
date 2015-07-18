@@ -10,17 +10,22 @@
 
 ## :rowboat: Getting Started
 
-Install this generator as a global module:
+1. Install this generator as a global module:
+  ```bash
+  npm install -g generator-ironhide-webapp
+  ```
 
-```bash
-npm install -g generator-ironhide-webapp
-```
+2. Initiate the generator:
+  ```bash
+  yo ironhide-webapp
+  ```
 
-Finally, initiate the generator:
+3. Install the Ruby gems manually:
+  ```
+  bundle install
+  ```
+  This will be automated in future release.
 
-```bash
-yo ironhide-webapp
-```
 
 ## :scroll: License
 
