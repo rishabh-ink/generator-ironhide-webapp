@@ -13,4 +13,4 @@ gem 'sass-css-importer', '1.0.0.beta.0'
 gem 'scss_lint', '~> 0.40'
 
 # Travis (rubygems.org/gems/travis)
-gem 'travis', '~> 1.7'
+gem 'travis', '~> 1.8'
