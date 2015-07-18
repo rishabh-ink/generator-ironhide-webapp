@@ -213,6 +213,12 @@ module.exports = yeoman.generators.Base.extend({
       );
 
       this.fs.copyTpl(
+        this.templatePath('hologramrc'),
+        this.destinationPath('.hologramrc'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
         this.templatePath('jshintignore'),
         this.destinationPath('.jshintignore'),
         { props: this.props }

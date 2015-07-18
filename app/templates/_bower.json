@@ -21,7 +21,8 @@
   "devDependencies": {
     "jasmine-ajax": "https://github.com/jasmine/jasmine-ajax.git#~3.2",
     "jasmine-jquery": "https://github.com/velesin/jasmine-jquery.git#~2.1",
-    "normalize-css": "https://github.com/necolas/normalize.css.git#~3.0"
+    "normalize-css": "https://github.com/necolas/normalize.css.git#~3.0",
+    "voxel-hologram": "https://github.com/rishabhsrao/voxel-hologram.git#~1.4"
   },
   "resolutions": {
   },

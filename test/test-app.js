@@ -30,6 +30,7 @@ describe('ironhide-webapp:app', function () {
       '.editorconfig',
       '.gitattributes',
       '.gitignore',
+      '.hologramrc',
       '.jshintignore',
       '.jshintrc',
       '.karmarc',
