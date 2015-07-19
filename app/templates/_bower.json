@@ -15,7 +15,7 @@
     "url": ""
   },
   "dependencies": {
-    "jquery": "https://github.com/jquery/jquery.git#~2.1",
+    "jquery": "https://github.com/jquery/jquery.git#~1.10",
     "requirejs": "https://github.com/jrburke/requirejs-bower.git#~2.1"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
     "voxel-hologram": "https://github.com/rishabhsrao/voxel-hologram.git#~1.4"
   },
   "resolutions": {
+    "jquery": "~1.10"
   },
   "ignore": [
     "**/.*",
