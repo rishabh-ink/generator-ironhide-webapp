@@ -12,4 +12,5 @@ www.npmjs.com/package/generator-ironhide-webapp
 
 Tools:
 NodeJS, Ruby, Gulp, Bower, Sass with Compass,
-RequireJS, Karma, Jasmine, JS Hint, SCSS Lint
+RequireJS, Karma, Jasmine, JS Hint, SCSS Lint,
+live style guide with Hologram
