@@ -237,7 +237,7 @@ module.exports = yeoman.generators.Base.extend({
 
     self.installDependencies({
       callback: function() {
-        self.log('Installation complete! Please run ' + chalk.yellow('rvm use . && bundle install') + ' to use your new Ruby gemset and to install your Ruby gems.');
+        self.log('Installation complete! Please run ' + chalk.yellow('rvm use . && gem install bundler && bundle install') + ' to use your new Ruby gemset and to install your Ruby gems.');
       }
     });
   }
