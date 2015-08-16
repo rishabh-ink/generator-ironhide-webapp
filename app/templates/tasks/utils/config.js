@@ -2,7 +2,7 @@ module.exports = {
   DIR: {
     src: "app",
     dist: "dist",
-    bower: "libraries",
+    bower: "bower_components",
     npm: "node_modules",
     script: "scripts",
     style: "styles",
@@ -39,7 +39,8 @@ module.exports = {
       scriptMain: "main.js",
       appMain: "<%= _.kebabCase(props.appname) %>.js",
       appModule: "<%= _.kebabCase(props.appname) %>",
-      karma: ".karmarc"
+      karma: ".karmarc",
+      hologram: ".hologramrc"
     },
     coverageReporter: {
       lcov: "lcov.info",

@@ -1,7 +1,7 @@
 require.config({
   paths: {
     // Libraries
-    "jquery": "../../libraries/jquery/jquery",
+    "jquery": "../../bower_components/jquery/jquery",
     // /Libraries
   },
 

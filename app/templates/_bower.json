@@ -32,7 +32,7 @@
     "/Gemfile",
     "/Gemfile.lock",
     "/gulpfile.js",
-    "/libraries",
+    "/bower_components",
     "/node_modules",
     "/package.json",
     "/reports",

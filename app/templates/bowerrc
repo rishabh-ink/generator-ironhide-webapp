@@ -1,5 +1,5 @@
 {
   "analytics": false,
   "interactive": false,
-  "directory": "libraries"
+  "directory": "bower_components"
 }

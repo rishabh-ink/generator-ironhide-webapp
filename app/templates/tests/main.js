@@ -16,8 +16,8 @@ require.config({
 
   paths: {
     // Libraries
-    "jquery": "libraries/jquery/jquery",
-    "jasmine-jquery": "libraries/jasmine-jquery/lib/jasmine-jquery",
+    "jquery": "bower_components/jquery/jquery",
+    "jasmine-jquery": "bower_components/jasmine-jquery/lib/jasmine-jquery",
     // /Libraries
 
     // Application

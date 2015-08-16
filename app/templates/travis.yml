@@ -6,7 +6,7 @@ git:
 cache:
   directories:
   - "./node_modules"
-  - "./libraries"
+  - "./bower_components"
   - "$HOME/.rvm/gems"
 before_script:
 - bundle install

@@ -20,7 +20,7 @@ Thumbs.db
 /.bundle
 
 # Bower (bower.io)
-/libraries
+/bower_components
 
 # Istanbul (github.com/gotwarlost/istanbul)
 /coverage

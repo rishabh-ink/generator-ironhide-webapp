@@ -35,11 +35,11 @@ bundle install
 
 :tophat: **Tip** If you have global installations of `bower` and `gulp`, then you can avoid typing the `./node_modules/.bin/` bit.
 
-:tophat: **Tip** Downloading dependencies over `git://` may be blocked if you are behind a firewall. The solution is to configure Git to use `https://` instead of `git://`. Run the following to force Git to use HTTPS:
+:tophat: **Tip** Downloading dependencies over `git://` may be blocked if you are behind a firewall. The solution is to configure Git to use `https://` instead of `git://`. It is important to do this globally otherwise it will not take effect on the nested Bower dependencies. Run the following to force Git to use HTTPS:
 
 ```
 git config url.https://.insteadOf git://
-# Undo using git config unset url.https://
+# Undo using `git config --global --unset url.https://`
 ```
 
 
