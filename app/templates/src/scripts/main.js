@@ -2,6 +2,8 @@ require.config({
   paths: {
     // Libraries
     "jquery": "../../bower_components/jquery/jquery",
+    "voxel": "../../bower_components/voxel/dist/scripts/voxel",
+    "voxel-hologram": "../../bower_components/voxel-hologram/dist/scripts/voxel-hologram"
     // /Libraries
   },
 

@@ -1,5 +1,5 @@
-define(["jquery", "components/example"],
-function($,        Example) {
+define(["jquery", "voxel-hologram", "components/example"],
+function($,        VoxelHologram,    Example) {
   "use strict";
 
   var <%= _.capitalize(_.camelCase(props.appname)) %> = {
@@ -64,6 +64,8 @@ function($,        Example) {
 
     setup: function() {
       // this.components.example = Example.create({ /* ... options ... */ });
+
+      this.components.voxelHologram = VoxelHologram.create();
 
       console.log(this.options.name, "setup()", "Set up components", { components: this.components });
       return this;

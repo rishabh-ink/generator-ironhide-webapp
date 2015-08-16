@@ -18,6 +18,8 @@ require.config({
     // Libraries
     "jquery": "bower_components/jquery/jquery",
     "jasmine-jquery": "bower_components/jasmine-jquery/lib/jasmine-jquery",
+    "voxel": "bower_components/voxel/dist/scripts/voxel",
+    "voxel-hologram": "bower_components/voxel-hologram/dist/scripts/voxel-hologram",
     // /Libraries
 
     // Application
