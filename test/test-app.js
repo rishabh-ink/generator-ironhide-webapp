@@ -15,7 +15,7 @@ describe('ironhide-webapp:app', function () {
 
   it('Should create files', function () {
     assert.file([
-      'app',
+      'src',
       'tasks',
       'tests',
       'bower.json',

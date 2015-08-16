@@ -1,6 +1,6 @@
 module.exports = {
   DIR: {
-    src: "app",
+    src: "src",
     dist: "dist",
     bower: "bower_components",
     npm: "node_modules",
@@ -23,7 +23,7 @@ module.exports = {
     coverage: "coverage",
 
     exclude: {
-      markup: "!app/*.html",
+      markup: "!src/*.html",
       test: "!/**/test{,/**}" // Exclude test files; @see https://github.com/gulpjs/gulp/issues/165#issuecomment-32613179
     }
   }, // /DIR

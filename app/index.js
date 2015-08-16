@@ -47,20 +47,20 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: {
-    app: function () {
+    src: function () {
       this.fs.copyTpl(
-        this.templatePath('app/**/*'),
-        this.destinationPath('app'),
+        this.templatePath('src/**/*'),
+        this.destinationPath('src'),
         { props: this.props }
       );
 
       this.fs.delete(
-        this.destinationPath('app/scripts/app.js')
+        this.destinationPath('src/scripts/app.js')
       );
 
       this.fs.copyTpl(
-        this.templatePath('app/scripts/app.js'),
-        this.destinationPath('app/scripts/' + _.kebabCase(this.props.appname) + '.js'),
+        this.templatePath('src/scripts/app.js'),
+        this.destinationPath('src/scripts/' + _.kebabCase(this.props.appname) + '.js'),
         { props: this.props }
       );
     },

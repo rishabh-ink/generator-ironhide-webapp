@@ -6,7 +6,7 @@ title: <%= props.appname %>
 subtitle: <%= props.description %>
 
 # The directory containing the source files to parse recursively
-source: ./app
+source: ./src
 
 # The directory that hologram will build to
 destination: ./dist/docs

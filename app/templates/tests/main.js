@@ -21,8 +21,8 @@ require.config({
     // /Libraries
 
     // Application
-    "<%= _.kebabCase(props.appname) %>": "app/scripts/<%= _.kebabCase(props.appname) %>",
-    "components/example": "app/scripts/components/example",
+    "<%= _.kebabCase(props.appname) %>": "src/scripts/<%= _.kebabCase(props.appname) %>",
+    "components/example": "src/scripts/components/example",
     // /Application
 
     // Fixtures
