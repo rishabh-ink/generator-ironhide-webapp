@@ -29,6 +29,7 @@ gulp.task("style:compile", ["style:lint"], function(callback) {
 
     if(null !== err) {
       $.util.log("[style:compile] err: ", err);
+      throw new $.util.PluginError("compass", err);
     }
 
     callback();
