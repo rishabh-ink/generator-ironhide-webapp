@@ -164,6 +164,13 @@ module.exports = yeoman.generators.Base.extend({
         { props: this.props }
       );
 
+      this.fs.copyTpl(
+        this.templatePath('_babelrc'),
+        this.destinationPath('.babelrc'),
+        { props: this.props }
+      );
+
+      this.fs.copyTpl(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json'),
         { props: this.props }
