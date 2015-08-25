@@ -27,8 +27,8 @@ gulp.task("style:compile", ["style:lint"], function(callback) {
       message: "Compilation complete!"
     });
 
-    if(null !== err) {
-      $.util.log("[style:compile] err: ", err);
+    if("undefined" !== typeof(process.env.<%= _.snakeCase(props.appname).toUpperCase() %>_CI)) {
+      // Break the build, if running inside a CI environment.
       throw new $.util.PluginError("compass", err);
     }
 
