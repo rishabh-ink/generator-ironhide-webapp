@@ -8,6 +8,7 @@ module.exports = {
     style: "styles",
     image: "images",
     font: "fonts",
+    fontello: "fontello",
     test: "tests",
     template: "templates",
     fixture: "fixtures",
@@ -40,7 +41,9 @@ module.exports = {
       appMain: "<%= _.kebabCase(props.appname) %>.js",
       appModule: "<%= _.kebabCase(props.appname) %>",
       karma: ".karmarc",
-      hologram: ".hologramrc"
+      hologram: ".hologramrc",
+      babel: ".babelrc",
+      fontello: ".fontellorc"
     },
     coverageReporter: {
       lcov: "lcov.info",
@@ -53,7 +56,8 @@ module.exports = {
       },
       script: {
         js: "js",
-        json: "json"
+        json: "json",
+        jsx: "jsx"
       },
       markup: {
         html: "html",

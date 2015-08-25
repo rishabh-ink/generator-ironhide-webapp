@@ -159,6 +159,11 @@ module.exports = yeoman.generators.Base.extend({
 
     others: function () {
       this.fs.copyTpl(
+        this.templatePath('_fontellorc'),
+        this.destinationPath('.fontellorc'),
+        { props: this.props }
+      );
+
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json'),
         { props: this.props }
