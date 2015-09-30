@@ -105,22 +105,22 @@ module.exports = yeoman.generators.Base.extend({
       );
 
       this.fs.delete(
-        this.destinationPath('tests/unit/app-spec.js')
+        this.destinationPath('tests/app-spec.js')
       );
 
       this.fs.delete(
-        this.destinationPath('tests/unit/app-fixture.js')
+        this.destinationPath('tests/app-fixture.js')
       );
 
       this.fs.copyTpl(
-        this.templatePath('tests/unit/app-spec.js'),
-        this.destinationPath('tests/unit/' + _.kebabCase(this.props.appname) + '-spec.js'),
+        this.templatePath('tests/app-spec.js'),
+        this.destinationPath('tests/' + _.kebabCase(this.props.appname) + '-spec.js'),
         { props: this.props }
       );
 
       this.fs.copyTpl(
-        this.templatePath('tests/fixtures/app-fixture.js'),
-        this.destinationPath('tests/fixtures/' + _.kebabCase(this.props.appname) + '-fixture.js'),
+        this.templatePath('tests/app-fixture.js'),
+        this.destinationPath('tests/' + _.kebabCase(this.props.appname) + '-fixture.js'),
         { props: this.props }
       );
     },

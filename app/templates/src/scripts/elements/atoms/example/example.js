@@ -1,5 +1,5 @@
-define(["jquery" /*, another-component */],
-function($ /*,       AnotherComponent */) {
+define(["jquery"],
+function($) {
   "use strict";
 
   var Example = {
@@ -75,5 +75,5 @@ function($ /*,       AnotherComponent */) {
     }
   };
 
-  return Object.create(Example);
+  return Example;
 });

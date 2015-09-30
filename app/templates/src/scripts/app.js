@@ -1,4 +1,4 @@
-define(["jquery", "voxel-hologram", "elements/atoms/example"],
+define(["jquery", "voxel-hologram", "elements.atoms.example"],
 function($,        VoxelHologram,    Example) {
   "use strict";
 

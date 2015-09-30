@@ -24,11 +24,11 @@ require.config({
 
     // Application
     "<%= _.kebabCase(props.appname) %>": "src/scripts/<%= _.kebabCase(props.appname) %>",
-    "components/example": "src/scripts/components/example",
+    "elements.atoms.example": "src/scripts/elements/atoms/example/example",
     // /Application
 
     // Fixtures
-    "<%= _.kebabCase(props.appname) %>-fixture": "tests/fixtures/<%= _.kebabCase(props.appname) %>-fixture"
+    "<%= _.kebabCase(props.appname) %>-fixture": "tests/<%= _.kebabCase(props.appname) %>-fixture"
     // /Fixtures
   },
 

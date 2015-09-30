@@ -1,9 +1,9 @@
-define(["jquery", "jasmine-jquery", "components/example"],
+define(["jquery", "jasmine-jquery", "elements.atoms.example"],
 function(jQ,       JasminejQuery,    Example) {
   describe("Example", function() {
     beforeEach(function() {
-      jasmine.getFixtures().fixturesPath = "/base/tests/fixtures";
-      loadFixtures("components/example-fixture.html");
+      jasmine.getFixtures().fixturesPath = "/base/tests";
+      loadFixtures("elements/atoms/example/example-fixture.html");
 
       var example = Example.create({ /* ... options ... */ });
     });

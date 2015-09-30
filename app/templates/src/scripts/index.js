@@ -3,8 +3,13 @@ require.config({
     // Libraries
     "jquery": "../../bower_components/jquery/jquery",
     "voxel": "../../bower_components/voxel/dist/scripts/voxel",
-    "voxel-hologram": "../../bower_components/voxel-hologram/dist/scripts/voxel-hologram"
+    "voxel-hologram": "../../bower_components/voxel-hologram/dist/scripts/voxel-hologram",
     // /Libraries
+
+    // Application
+    "<%= _.kebabCase(props.appname) %>": "<%= _.kebabCase(props.appname) %>",
+    "elements.atoms.example": "elements/atoms/example/example",
+    // /Application
   },
 
   shim: {

@@ -1,6 +1,6 @@
 define([],
 function() {
   return {
-    "greeting": "Hello world!",
+    "greeting": "Hello world!"
   };
 });
