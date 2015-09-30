@@ -12,7 +12,7 @@
   "author": {
     "name": "",
     "email": "",
-    "url": ""
+    "url": "https://github.com/<%= _.kebabCase(props.githubUsername) %>"
   },
   "dependencies": {
     "jquery": "https://github.com/jquery/jquery.git#~1.10",
