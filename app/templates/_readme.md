@@ -76,7 +76,37 @@ bundle clean --force && bundle install
 
 ... to keep your repository lean and mean.
 
+:tophat: **Tip** To skip a build in Travis, just add, `[ci skip]` or `[skip ci]`, somewhere in your commit message. See [Travis docs](http://docs.travis-ci.com/user/customizing-the-build/#Skipping-a-build).
+
 :tophat: **Tip** The environment variable, `<%= _.snakeCase(props.appname).toUpperCase() %>_CI`, must be set in [Travis](http://docs.travis-ci.com/user/environment-variables). It is used to control how Gulp builds the project, for example, sending operating system build notifications.
+
+### :pencil2: Developing
+
+* Use `gulp serve` to fire up a live-reload server and a browser.
+* The `serve` task will watch the `src` directory and reload your browser upon detecting changes.
+
+### Installing font icons courtesy Fontello
+
+The icons in this repository use a custom build from [Fontello](http://fontello.com). There is a `.fontellorc` configuration file containing all the icons currently in use.
+
+#### Adding more Fontello icons
+
+To add more icons from Fontello...
+
+* Run `gulp font:config` to open [Fontello](http://fontello.com) in a browser with the current icons pre-selected.
+* (Un)Select icons as needed and select the **Download webfont** button.
+* You'll now get a `.zip` file containing your new icons and a `config.json` file.
+* Disregard everything else and copy the contents of `config.json` to `.fontellorc`.
+* Run `gulp font:install` to download and install the newly selected icons.
+* The fonts are installed in `lib/font/fontello` and the corresponding CSS in `lib/style/vanilla/vendor/fontello`.
+* You can, optionally, add `lib/font/fontello` and `lib/style/vanilla/vendor/fontello` to `.gitignore`.
+
+:warning: Notes:
+
+* This process seems a bit long, but we hope to make it more streamlined and easier in the future. This solution enables you to use various font-icon vendors seamlessly without compromising performance.
+* We hope to add a `gulp font:add --icon-name={{icon-name}}` task so the above process is automated.
+* We hope you appreciate the need for such a solution.
+* `gulp build` will not run the `font:install` task. It must be run separately.
 
 
 ## :rocket: Deploy
