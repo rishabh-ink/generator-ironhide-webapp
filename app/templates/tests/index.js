@@ -33,6 +33,13 @@ require.config({
   },
 
   shim: {
+    // Test libraries
+    "jasmine-jquery": {
+      deps: [
+        "jquery"
+      ]
+    }
+    // /Test libraries
   },
 
   deps: allTestFiles,

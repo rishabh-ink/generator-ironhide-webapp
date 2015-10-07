@@ -10,7 +10,7 @@ var bs = require("browser-sync");
  * @see www.browsersync.io
  * @see github.com/google/web-starter-kit/blob/master/gulpfile.js
  */
-gulp.task("serve", ["build"], function () {
+gulp.task("serve", ["build"], function() {
   bs({
     notify: true,
     injectChanges: true,
@@ -31,8 +31,10 @@ gulp.task("serve", ["build"], function () {
   ], bs.reload);
 
   gulp.watch([
-    path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.script.js)
+    path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.script.js),
+    path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.script.jsx)
   ], [
+    "script:transpile",
     "script:minify",
     "source"
   ]);

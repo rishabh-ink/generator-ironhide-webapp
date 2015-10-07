@@ -9,7 +9,7 @@ var notify = require("./utils/notify-script-test-unit");
  * script:transpile
  * @see www.npmjs.com/package/gulp-babel
  */
-gulp.task("script:transpile", function (callback) {
+gulp.task("script:transpile", function(callback) {
   return gulp.src([
       path.join(CFG.DIR.src, CFG.DIR.script, "/**/*." + CFG.FILE.extension.script.js)
     ])

@@ -10,7 +10,7 @@ var rjs = require("requirejs");
  * script:optimize
  * @see www.npmjs.org/package/requirejs
  */
-gulp.task("script:optimize", ["script:test"], function (callback) {
+gulp.task("script:optimize", ["script:test"], function(callback) {
   rjs.optimize({
     baseUrl: path.join(CFG.DIR.src, CFG.DIR.script),
     mainConfigFile: path.join(CFG.DIR.src, CFG.DIR.script, CFG.FILE.config.scriptMain),

@@ -6,11 +6,11 @@ var path = require('path');
 var _ = require('lodash');
 
 module.exports = yeoman.generators.Base.extend({
-  initializing: function () {
+  initializing: function() {
     this.pkg = require('../package.json');
   },
 
-  prompting: function () {
+  prompting: function() {
     var done = this.async();
 
     this.log(yosay(
@@ -39,7 +39,7 @@ module.exports = yeoman.generators.Base.extend({
       default: path.basename(process.cwd())
     }];
 
-    this.prompt(prompts, function (props) {
+    this.prompt(prompts, function(props) {
       this.props = props;
 
       done();
@@ -47,7 +47,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: {
-    src: function () {
+    src: function() {
       this.fs.copyTpl(
         this.templatePath('src/**/*'),
         this.destinationPath('src'),
@@ -65,7 +65,7 @@ module.exports = yeoman.generators.Base.extend({
       );
     },
 
-    taskRunner: function () {
+    taskRunner: function() {
       this.fs.copyTpl(
         this.templatePath('_gulpfile.js'),
         this.destinationPath('gulpfile.js'),
@@ -91,7 +91,7 @@ module.exports = yeoman.generators.Base.extend({
       );
     },
 
-    testRunner: function () {
+    testRunner: function() {
       this.fs.copyTpl(
         this.templatePath('karmarc'),
         this.destinationPath('.karmarc'),
@@ -125,7 +125,7 @@ module.exports = yeoman.generators.Base.extend({
       );
     },
 
-    cssPreprocessor: function () {
+    cssPreprocessor: function() {
       this.fs.copyTpl(
         this.templatePath('_Gemfile'),
         this.destinationPath('Gemfile'),
@@ -157,7 +157,7 @@ module.exports = yeoman.generators.Base.extend({
       );
     },
 
-    others: function () {
+    others: function() {
       this.fs.copyTpl(
         this.templatePath('_fontellorc'),
         this.destinationPath('.fontellorc'),
@@ -244,7 +244,7 @@ module.exports = yeoman.generators.Base.extend({
     }
   },
 
-  install: function () {
+  install: function() {
     var self = this;
 
     self.installDependencies({

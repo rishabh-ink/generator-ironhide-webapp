@@ -8,7 +8,7 @@ var pkg = require(path.join("..", CFG.FILE.config.pkg));
  * script:minify:json
  * @see www.npmjs.org/package/gulp-jsonminify
  */
-gulp.task("script:minify:json", [], function () {
+gulp.task("script:minify:json", [], function() {
   return gulp.src([
       path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.script.json)
     ], {

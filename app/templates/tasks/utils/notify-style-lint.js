@@ -1,7 +1,7 @@
 var notify = require("./notify");
 var util = require("util");
 
-module.exports = function notifyStyleLint (stdout) {
+module.exports = function notifyStyleLint(stdout) {
   var messages = stdout.split("\n");
 
   messages.pop(); // Remove last empty new message.

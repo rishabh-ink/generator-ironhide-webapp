@@ -11,7 +11,7 @@ var notify = require("./utils/notify-script-test-unit");
  * @see www.npmjs.org/package/karma
  * @see karma-runner.github.io
  */
-gulp.task("script:test:unit", ["script:lint"], function (callback) {
+gulp.task("script:test:unit", ["script:lint"], function(callback) {
   karma.start({
     configFile: __dirname + "/../" + CFG.FILE.config.karma,
     singleRun: true

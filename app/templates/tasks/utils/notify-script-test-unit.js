@@ -1,6 +1,6 @@
 var notify = require("./notify");
 
-module.exports = function notifyScriptTestUnit (exitCode) {
+module.exports = function notifyScriptTestUnit(exitCode) {
   var message = null;
 
   if(0 !== exitCode) {

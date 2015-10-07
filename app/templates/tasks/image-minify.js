@@ -8,7 +8,7 @@ var pkg = require(path.join("..", CFG.FILE.config.pkg));
  * image:minify
  * @see www.npmjs.org/package/gulp-imagemin
  */
-gulp.task("image:minify", function () {
+gulp.task("image:minify", function() {
   return gulp.src([
       path.join(CFG.DIR.src, CFG.DIR.image, "**/*")
     ])

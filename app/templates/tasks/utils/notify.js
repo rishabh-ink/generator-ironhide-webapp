@@ -9,7 +9,7 @@ module.exports = {
     title: pkg.name
   },
 
-  showNotification: function (options) {
+  showNotification: function(options) {
     extend(options, this.defaults);
 
     if("undefined" !== typeof(process.env.<%= _.snakeCase(props.appname).toUpperCase() %>_CI)) {
