@@ -15,6 +15,6 @@ gulp.task("source", [], function() {
     path.join(CFG.DIR.src, CFG.DIR.font, "**/*")
   ];
 
-  return gulp.src(sources, { base: path.join(CFG.DIR.src) }) // base will ensure that `dist` does not contain the `lib` directory.
+  return gulp.src(sources, { base: path.join(CFG.DIR.src) }) // base will ensure that `dist` does not contain the `src` directory.
     .pipe(gulp.dest(path.join(CFG.DIR.dist)));
 });
