@@ -1,3 +1,17 @@
 {
-  modules: "amdStrict"
+  modules: "amdStrict",
+  whitelist: [
+    "es6.arrowFunctions",
+    "es6.blockScoping",
+    "es6.classes",
+    "es6.constants",
+    "es6.destructuring",
+    "es6.forOf",
+    "es6.literals",
+    "es6.parameters",
+    "es6.spread",
+    "es6.templateLiterals",
+    "react",
+    "react.displayName"
+  ]
 }
