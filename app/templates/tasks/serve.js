@@ -35,8 +35,8 @@ gulp.task("serve", ["build"], function() {
     path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.script.jsx)
   ], [
     "script:transpile",
-    "script:minify",
-    "source"
+    "source",
+    "script:test"
   ]);
 
   gulp.watch([
