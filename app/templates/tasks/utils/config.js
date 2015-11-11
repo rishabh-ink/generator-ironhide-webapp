@@ -33,7 +33,7 @@ module.exports = {
     config: {
       pkg: "package.json",
       styleLint: ".scsslintrc",
-      scriptLint: ".jshintrc",
+      scriptLint: ".eslintrc",
       compass: ".compassrc",
       bower: "bower.json",
       testMain: "index.js",

@@ -1,0 +1,13 @@
+{
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "blockBindings": true,
+    "arrowFunctions": true,
+    "restParams": true,
+    "jsx": true
+  },
+  "rules": {
+    "comma-dangle": 2,
+    "eqeqeq": 2
+  }
+}
