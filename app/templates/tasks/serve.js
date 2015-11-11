@@ -23,7 +23,8 @@ gulp.task("serve", ["build"], function() {
   gulp.watch([
         path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.style.scss)
   ], [
-    "style:compile"
+    "style:compile",
+    "style:doc"
   ]);
 
   gulp.watch([
