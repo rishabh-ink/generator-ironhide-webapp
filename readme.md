@@ -38,7 +38,7 @@ All the Gulp tasks are neatly organized into a [`tasks`](app/templates/tasks) di
 They provide the following benefits:
 
   * **Image minification** with **imagemin**
-  * **JavaScript linting** with **JSHint**
+  * **JavaScript linting** with **ESLint**
   * **JavaScript & JSON minification** with **UglifyJS**
   * **RequireJS optimization** with **r.js optimizer**
   * **JavaScript unit** testing with **Jasmine** running via **Karma**
