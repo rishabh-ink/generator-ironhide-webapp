@@ -231,14 +231,14 @@ module.exports = yeoman.generators.Base.extend({
       );
 
       this.fs.copyTpl(
-        this.templatePath('jshintignore'),
-        this.destinationPath('.jshintignore'),
+        this.templatePath('eslintignore'),
+        this.destinationPath('.eslintignore'),
         { props: this.props }
       );
 
       this.fs.copyTpl(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc'),
+        this.templatePath('eslintrc'),
+        this.destinationPath('.eslintrc'),
         { props: this.props }
       );
     }
