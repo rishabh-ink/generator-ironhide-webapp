@@ -34,9 +34,14 @@ gulp.task("serve", ["build"], function() {
     path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.script.js),
     path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.script.jsx)
   ], [
-    "script:transpile",
     "source",
     "script:test"
+  ]);
+
+  gulp.watch([
+    path.join(CFG.DIR.src, "/**/*." + CFG.FILE.extension.script.jsx)
+  ], [
+    "script:transpile"
   ]);
 
   gulp.watch([
