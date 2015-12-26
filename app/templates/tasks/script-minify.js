@@ -17,6 +17,13 @@ gulp.task("script:minify", ["script:optimize", "script:minify:json", "source"], 
     ])
     .pipe($.uglify({
       outSourceMap: false, // Disable sourcemaps until github.com/gulpjs/gulp/issues/356
+      // See github.com/terinjokes/gulp-uglify/issues/67
+      mangle: {
+        except: [
+          "require",
+          "define"
+        ]
+      },
       preserveComments: "some",
       compress: {
         drop_console: true,
